@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundsetter"
+    tools:context=".MainActivity">
+ <androidx.appcompat.widget.LinearLayoutCompat
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:id="@+id/linear_layout_main"
+  android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.SearchView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:saveEnabled="true"
+                    android:soundEffectsEnabled="true"
+                    android:touchscreenBlocksFocus="false"
+                    android:layout_marginRight="40dp"
+                    app:defaultQueryHint="search Here"
+                    android:id="@+id/main_serchview"
+                    app:iconifiedByDefault="false"
+                    android:backgroundTint="@color/backgroundsetter"
+                    android:background="@drawable/searchview_back"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="3dp"
+                    android:layout_weight="2"
+                     android:layout_marginLeft="-40dp"
+                    android:layout_marginTop="3dp"
+                    android:src="@drawable/baseline_notifications_none_24"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.Toolbar>
+     <HorizontalScrollView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_margin="12dp">
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="15dp"
+    app:cardCornerRadius="5dp"
+    app:cardPreventCornerOverlap="true">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image_data"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/baseline_person_4_24"
+            app:civ_border_width="2dp"
+            android:layout_gravity="end"
+             android:padding="3dp"
+            android:layout_marginRight="15dp"
+             />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Profile"
+                android:textStyle="bold"
+                android:id="@+id/name_card_main"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View All"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:id="@+id/view_all_main_user"
+                android:textSize="15sp"
+                android:textColor="#0B29E8"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.cardview.widget.CardView>
+    
+</androidx.appcompat.widget.LinearLayoutCompat>
+     </HorizontalScrollView>
+
+ </androidx.appcompat.widget.LinearLayoutCompat>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/linear_layout_main"
+    android:layout_above="@id/bottom_navigation_home"
+    android:id="@+id/framelayout">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/refreshLayout"
+        android:layout_margin="5dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/recycler_view"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</FrameLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:menu="@menu/menu_items"
+
+        android:id="@+id/bottom_navigation_home"
+        android:layout_alignParentBottom="true"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:id="@+id/floating_main"
+        android:contentDescription="Addition of new job"
+        android:layout_above="@+id/bottom_navigation_home"
+        android:src="@drawable/baseline_add_24" />
+</RelativeLayout>

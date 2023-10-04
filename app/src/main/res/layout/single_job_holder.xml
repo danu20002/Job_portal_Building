@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    app:cardCornerRadius="10dp"
+
+    app:cardElevation="10dp">
+    >
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="11dp"
+        android:orientation="vertical"
+        android:paddingLeft="5dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/company_image_data_single"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/baseline_person_4_24"/>
+    <TextView
+        android:id="@+id/position_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:singleLine="false"
+
+        android:text="Position Name"
+        android:inputType="textCapSentences|textMultiLine"
+        android:layout_toLeftOf="@+id/company_image_data_single"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <TextView
+    android:id="@+id/company_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:isScrollContainer="true"
+    android:screenReaderFocusable="true"
+    android:scrollHorizontally="true"
+    android:singleLine="true"
+    android:text="Company Name"
+        android:inputType="textCapSentences|textMultiLine"
+    android:layout_toLeftOf="@+id/company_image_data_single"
+    android:layout_below="@id/position_name"
+    android:textAlignment="textStart"
+    android:textSize="17sp"
+    android:textStyle="normal" />
+</RelativeLayout>
+
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:inputType="textCapSentences|textMultiLine"
+                android:drawableStart="@drawable/baseline_location_on_24"
+                android:id="@+id/location_job"/>
+                
+
+        
+
+        <TextView
+            android:id="@+id/branch_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text=" Branch: "
+            android:inputType="textCapSentences|textMultiLine"
+            android:drawableStart="@drawable/baseline_people_alt_24"
+            android:textAlignment="textStart"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/package_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textAlignment="textStart"
+            android:textSize="14sp"
+            android:drawableStart="@drawable/baseline_account_balance_wallet_24"
+            android:textStyle="normal" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last Date"
+            android:drawableStart="@drawable/baseline_calendar_month_24"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/last_date_single"/>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:drawableLeft="@drawable/baseline_message_24"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:text=" Job Description"/>
+
+        <TextView
+            android:id="@+id/job_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="des"
+            android:textAlignment="textStart"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:autoLink="web"
+            android:inputType="textCapSentences|textMultiLine"
+            android:textColorLink="#0624E1"
+            android:linksClickable="true"
+            android:textStyle="normal" />
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_gravity="end"
+                android:layout_margin="10dp"
+                android:background="@drawable/apply_btn_background"
+                android:drawableEnd="@drawable/baseline_link_24"
+                android:id="@+id/apply_btn"
+                android:paddingRight="5dp"
+                android:text="Apply" />
+
+
+
+
+
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.cardview.widget.CardView>
+</RelativeLayout>

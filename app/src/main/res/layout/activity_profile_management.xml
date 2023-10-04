@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundsetter"
+    tools:context=".Profile_Management_activity">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:drawableEnd="@drawable/baseline_edit_24"
+    android:text="Edit"
+    android:textAlignment="center"
+    android:textStyle="bold"
+    android:textSize="15sp"
+    android:layout_alignParentRight="true"
+    android:background="@drawable/edittext_back"
+    android:layout_marginTop="30dp"
+    android:padding="10dp"
+    android:layout_marginRight="20dp"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:civ_border_color="#040303"
+                app:civ_border_width="2dp"
+                android:src="@drawable/baseline_person_outline_24"
+                app:civ_border_overlay="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/imagview_profile_management"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#DD900E"
+                android:text="Your name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/username_profile_management"
+                />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    android:background="@drawable/profile_text_background"
+                    android:textAlignment="textStart"
+                    android:text="Bio:+"
+                    android:layout_marginTop="20dp"
+                   android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="start"
+                    android:drawableEnd="@drawable/baseline_edit_24"
+                    android:id="@+id/bio_section"
+                   />
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:menu="@menu/menu_items"
+        android:id="@+id/bottom_navigation_home"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

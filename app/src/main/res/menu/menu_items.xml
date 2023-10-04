@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <item android:id="@+id/home"
+      android:icon="@drawable/baseline_home_24"
+        android:enabled="true"
+        
+       android:title="Home"/>
+    <item android:id="@+id/applications"
+      android:icon="@drawable/baseline_beenhere_24"
+      android:title="Saved"/>
+
+    <item android:title="Messages"
+          android:id="@+id/chats"
+          android:icon="@drawable/baseline_message_24"/>
+    <item android:icon="@drawable/baseline_person_outline_24"
+           android:id="@+id/profile_menu"
+           android:title="Profile"/>
+
+</menu>

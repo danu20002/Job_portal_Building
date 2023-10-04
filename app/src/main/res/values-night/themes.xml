@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.JobSearchApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your dark theme here. -->
+<!--         <item name="colorPrimary">#ffff</item>-->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+
+    </style>
+</resources>

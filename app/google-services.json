@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "258796774898",
+    "project_id": "job-search-app-d1988",
+    "storage_bucket": "job-search-app-d1988.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258796774898:android:f8f44e8462de814f55f76b",
+        "android_client_info": {
+          "package_name": "com.daneshnaik.jobsearchapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258796774898-783184o7eoes1usjf3io5pudvfoecqc0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKyQDVZTzy1cwLmcYJ2RWEHYt4kRctt_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258796774898-783184o7eoes1usjf3io5pudvfoecqc0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
