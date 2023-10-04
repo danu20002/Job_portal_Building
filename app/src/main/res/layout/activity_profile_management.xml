@@ -144,6 +144,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=" not Added"
+            android:textStyle="normal"
+            android:textSize="15sp"
+            android:textAlignment="textStart"
             android:drawableStart="@drawable/baseline_calendar_month_24"/>
         <TextView
             android:layout_width="match_parent"
