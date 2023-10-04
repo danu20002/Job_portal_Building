@@ -226,7 +226,8 @@ FirebaseDatabase database;
 
     }
     public  void sending_notification(){
-       
+        String username="collagebuddy111@gmail.com";
+        String password="rvorsglrrmacwhck";
         Properties props=new Properties();
         props.put("mail.smtp.auth","true");
         props.put("mail.smtp.SSL","true");

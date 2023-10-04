@@ -24,14 +24,14 @@ public class Profile_Management_activity extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseDatabase database;
     CircleImageView image_profile_photo;
-    TextView username_profile_management;
+    TextView username_profile_management,Email_profile_management;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_management);
         image_profile_photo=findViewById(R.id.imagview_profile_management);
         username_profile_management=findViewById(R.id.username_profile_management);
-
+         Email_profile_management=findViewById(R.id.text_email_profile);
 
         database=FirebaseDatabase.getInstance();
        auth= FirebaseAuth.getInstance();
@@ -41,6 +41,7 @@ public class Profile_Management_activity extends AppCompatActivity {
                String profile_pic_profile_management=snapshot.child("profile_image").getValue().toString();
                Glide.with(getApplicationContext()).load(profile_pic_profile_management).into(image_profile_photo);
                username_profile_management.setText(snapshot.child("name").getValue().toString());
+               Email_profile_management.setText(snapshot.child("email").getValue().toString());
 
            }
 

@@ -25,6 +25,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -59,6 +60,7 @@ SwipeRefreshLayout swipeRefreshLayout;
 ImageView profile_image_main;
 BottomNavigationView bottom_navigation;
 TextView name_card_main,view_all_name_user;
+ProgressBar progressbar_home;
 
 
     int id =0;
@@ -85,21 +87,25 @@ TextView name_card_main,view_all_name_user;
         name_card_main=findViewById(R.id.name_card_main);
         view_all_name_user=findViewById(R.id.view_all_main_user);
 
+        progressbar_home=findViewById(R.id.progressbar_home);
 
 
 
        FirebaseDatabase.getInstance().getReference().child("Users").child(auth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
            @Override
            public void onDataChange(@NonNull DataSnapshot snapshot) {
+               progressbar_home.setVisibility(View.VISIBLE);
                String profile_photo=snapshot.child("profile_image").getValue().toString();
                Glide.with(getApplicationContext()).load(profile_photo).placeholder(R.drawable.baseline_person_4_24).into(profile_image_main);
                name_card_main.setText(snapshot.child("name").getValue().toString());
+               progressbar_home.setVisibility(View.INVISIBLE);
 
            }
 
            @Override
            public void onCancelled(@NonNull DatabaseError error) {
                Toast.makeText(MainActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+               progressbar_home.setVisibility(View.INVISIBLE);
            }
        });
 
@@ -160,6 +166,7 @@ TextView name_card_main,view_all_name_user;
         database.getReference().child("Job_Apply").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                progressbar_home.setVisibility(View.VISIBLE);
                 details.clear();
                 for(DataSnapshot dataSnapshot:snapshot.getChildren()){
                     job_details detailing=dataSnapshot.getValue(job_details.class);
@@ -170,13 +177,13 @@ TextView name_card_main,view_all_name_user;
                     }
                 }
                 adapter.notifyDataSetChanged();
-
+               progressbar_home.setVisibility(View.INVISIBLE);
 
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+             progressbar_home.setVisibility(View.INVISIBLE);
             }
         });
         searchView.clearFocus();
@@ -239,22 +246,25 @@ TextView name_card_main,view_all_name_user;
         for(job_details users1: details){
             if(users1.getCompany_name().toLowerCase().contains(text.toLowerCase())){
                 filterlist.add(users1);
-            } else if (users1.getJob_title().toLowerCase().contains(text.toLowerCase())) {
-                filterlist.add(users1);
-            } else if (users1.getBranch().toLowerCase().contains(text.toLowerCase())) {
-                filterlist.add(users1);
-            } else if (users1.getJob_descrtption().toLowerCase().contains(text.toLowerCase())) {
-                filterlist.add(users1);
-            } else if (users1.getPackage_amount().toLowerCase().contains(text.toLowerCase())) {
-                filterlist.add(users1);
-            } else if (users1.getLocation().toLowerCase().contains(text.toLowerCase())) {
-                filterlist.add(users1);
+//            } else if (users1.getJob_title().toLowerCase().contains(text.toLowerCase())) {
+//                filterlist.add(users1);
+//            } else if (users1.getBranch().toLowerCase().contains(text.toLowerCase())) {
+//                filterlist.add(users1);
+//            } else if (users1.getJob_descrtption().toLowerCase().contains(text.toLowerCase())) {
+//                filterlist.add(users1);
+//            } else if (users1.getPackage_amount().toLowerCase().contains(text.toLowerCase())) {
+//                filterlist.add(users1);
+//            } else if (users1.getLocation().toLowerCase().contains(text.toLowerCase())) {
+//                filterlist.add(users1);
             }
         }
         if(filterlist.isEmpty()){
             Toast.makeText(getApplicationContext(),"No Match Found",Toast.LENGTH_LONG).show();
+
+
         }else{
             adapter.setfileterUpdatelist(filterlist);
+
         }
 
     }

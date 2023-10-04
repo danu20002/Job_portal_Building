@@ -10,7 +10,7 @@
     app:cardCornerRadius="10dp"
 
     app:cardElevation="10dp">
-    >
+
 
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -38,7 +38,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:singleLine="false"
-
+        android:textColor="@color/black"
         android:text="Position Name"
         android:inputType="textCapSentences|textMultiLine"
         android:layout_toLeftOf="@+id/company_image_data_single"
@@ -52,6 +52,7 @@
     android:layout_marginTop="5dp"
     android:layout_marginBottom="5dp"
     android:isScrollContainer="true"
+        android:textColor="@color/black"
     android:screenReaderFocusable="true"
     android:scrollHorizontally="true"
     android:singleLine="true"
@@ -74,6 +75,7 @@
                 android:text="Location"
                 android:textStyle="normal"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:inputType="textCapSentences|textMultiLine"
                 android:drawableStart="@drawable/baseline_location_on_24"
                 android:id="@+id/location_job"/>
@@ -88,6 +90,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:text=" Branch: "
+            android:textColor="@color/black"
             android:inputType="textCapSentences|textMultiLine"
             android:drawableStart="@drawable/baseline_people_alt_24"
             android:textAlignment="textStart"
@@ -102,12 +105,15 @@
             android:layout_marginBottom="5dp"
             android:textAlignment="textStart"
             android:textSize="14sp"
+            android:text=" wallet"
+            android:textColor="@color/black"
             android:drawableStart="@drawable/baseline_account_balance_wallet_24"
             android:textStyle="normal" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Last Date"
+            android:textColor="@color/black"
             android:drawableStart="@drawable/baseline_calendar_month_24"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
@@ -117,6 +123,7 @@
     android:layout_height="wrap_content"
     android:drawableLeft="@drawable/baseline_message_24"
     android:layout_marginTop="5dp"
+    android:textColor="@color/black"
     android:layout_marginBottom="5dp"
     android:text=" Job Description"/>
 
@@ -127,6 +134,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:text="des"
+            android:textColor="@color/black"
             android:textAlignment="textStart"
             android:layout_marginLeft="20dp"
             android:textSize="15sp"
