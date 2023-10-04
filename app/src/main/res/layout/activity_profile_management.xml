@@ -160,6 +160,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=" not added"
+            android:textStyle="normal"
+            android:textSize="15sp"
+            android:textAlignment="textStart"
             android:drawableStart="@drawable/baseline_call_24"/>
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.cardview.widget.CardView>
