@@ -20,6 +20,11 @@
 <!--    android:padding="10dp"-->
 <!--    android:layout_marginRight="20dp"/>-->
 
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/bottom_navigation_home">
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -329,56 +334,101 @@
                    <androidx.appcompat.widget.LinearLayoutCompat
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
-                       android:orientation="horizontal">
+                       android:padding="8dp"
+                       android:orientation="vertical">
+                       <androidx.appcompat.widget.LinearLayoutCompat
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal">
+                           <TextView
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:autoHandwritingEnabled="true"
+                               android:textSize="15sp"
+                               android:textStyle="bold"
+                               android:textAlignment="textStart"
+                               android:text="Profile Summary"
+                               android:textColor="@color/black"
+                               android:layout_gravity="center"
+                               android:gravity="start"
+                               android:layout_weight="1"
+                               android:id="@+id/bio_section"
+                               />
+                           <ImageView
+                               android:layout_width="23dp"
+                               android:layout_height="25dp"
+                               android:src="@drawable/baseline_edit_24"/>
+
+                       </androidx.appcompat.widget.LinearLayoutCompat>
                        <TextView
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
-                           android:autoHandwritingEnabled="true"
-                           android:textSize="15sp"
-                           android:textStyle="normal"
                            android:textAlignment="textStart"
-                           android:text="Bio:Add Bio Here"
-                           android:padding="15dp"
-                           android:textColor="@color/black"
-                           android:layout_gravity="center"
-                           android:gravity="start"
-                           android:layout_weight="1"
-                           android:id="@+id/bio_section"
-                           />
-                       <ImageView
-                           android:layout_width="23dp"
-                           android:layout_height="25dp"
-                           android:src="@drawable/baseline_edit_24"/>
-
+                           android:textSize="14sp"
+                           android:textStyle="normal"
+                           android:text="Not Added"
+                           android:textColor="@color/black"/>
                    </androidx.appcompat.widget.LinearLayoutCompat>
+
 
                </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="5dp"
-            android:layout_margin="20dp"
-            app:cardElevation="10dp"
-            >
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:cardCornerRadius="5dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            app:cardElevation="10dp"-->
+<!--            >-->
+<!--            <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
 
-               android:orientation="horizontal">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:padding="15dp"
-                    android:layout_weight="1"/>
-                <ImageView
-                    android:layout_width="23dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/baseline_edit_24"/>
-            </androidx.appcompat.widget.LinearLayoutCompat>
-        </androidx.cardview.widget.CardView>
+<!--               android:orientation="horizontal">-->
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text=""-->
+<!--                    android:padding="15dp"-->
+<!--                    android:layout_weight="1"/>-->
+<!--                <ImageView-->
+<!--                    android:layout_width="23dp"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    android:src="@drawable/baseline_edit_24"/>-->
+<!--            </androidx.appcompat.widget.LinearLayoutCompat>-->
+<!--        </androidx.cardview.widget.CardView>-->
 
+         <androidx.cardview.widget.CardView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:cardElevation="10dp"
+             android:layout_margin="20dp"
+             app:cardCornerRadius="5dp">
+             <androidx.appcompat.widget.LinearLayoutCompat
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+
+                 android:padding="8dp"
+                 android:orientation="horizontal">
+                 <ImageView
+                     android:layout_width="90dp"
+                     android:layout_height="90dp"
+                     android:src="@drawable/baseline_person_outline_24"/>
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center"
+                     android:text="Not Uploaded Yet"
+                     android:layout_weight="1"/>
+                 <ImageView
+                     android:layout_width="23dp"
+                     android:layout_height="25dp"
+                     android:src="@drawable/baseline_edit_24"/>
+
+
+
+             </androidx.appcompat.widget.LinearLayoutCompat>
+         </androidx.cardview.widget.CardView>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>
@@ -391,14 +441,13 @@
 
 
 
-
+</FrameLayout>
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:menu="@menu/menu_items"
-
         android:id="@+id/bottom_navigation_home"
         android:layout_alignParentBottom="true"/>
 </RelativeLayout>
