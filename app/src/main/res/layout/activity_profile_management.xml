@@ -413,11 +413,12 @@
                  <ImageView
                      android:layout_width="90dp"
                      android:layout_height="90dp"
-                     android:src="@drawable/baseline_person_outline_24"/>
+                     android:src="@drawable/notsbook"/>
                  <TextView
                      android:layout_width="match_parent"
                      android:layout_height="wrap_content"
                      android:layout_gravity="center"
+                     android:paddingLeft="5dp"
                      android:text="Not Uploaded Yet"
                      android:layout_weight="1"/>
                  <ImageView
