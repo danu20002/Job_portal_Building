@@ -83,6 +83,7 @@
                 android:textColor="#5D659A"
                 android:textStyle="normal"
                 android:textSize="15sp"
+                android:id="@+id/current_school_name"
                 android:textAlignment="center"
                 android:layout_gravity="center"
                 android:gravity="center"/>
