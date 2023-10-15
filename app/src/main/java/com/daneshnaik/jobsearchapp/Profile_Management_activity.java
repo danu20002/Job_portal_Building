@@ -39,9 +39,17 @@ public class Profile_Management_activity extends AppCompatActivity {
            @Override
            public void onDataChange(@NonNull DataSnapshot snapshot) {
                String profile_pic_profile_management=snapshot.child("profile_image").getValue().toString();
-               Glide.with(getApplicationContext()).load(profile_pic_profile_management).into(image_profile_photo);
-               username_profile_management.setText(snapshot.child("name").getValue().toString());
-               Email_profile_management.setText(snapshot.child("email").getValue().toString());
+               if(snapshot.exists()){
+
+                   Glide.with(getApplicationContext()).load(profile_pic_profile_management).into(image_profile_photo);
+                   username_profile_management.setText(snapshot.child("name").getValue().toString());
+                   Email_profile_management.setText(snapshot.child("email").getValue().toString());
+               }else{
+                   Glide.with(getApplicationContext()).load(R.drawable.baseline_person_4_24).into(image_profile_photo);
+                   username_profile_management.setText("");
+                   Email_profile_management.setText("");
+               }
+
 
            }
 

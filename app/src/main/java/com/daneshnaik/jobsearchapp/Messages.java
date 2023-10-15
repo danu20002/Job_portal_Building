@@ -19,6 +19,13 @@ public class Messages extends AppCompatActivity {
         bottom_navigation_messages=findViewById(R.id.bottom_navigation_home);
         bottom_navigation_messages.setSelectedItemId(R.id.chats);
 
+
+
+
+
+
+
+
         bottom_navigation_messages.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
 
             @Override
